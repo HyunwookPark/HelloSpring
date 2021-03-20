@@ -1,7 +1,5 @@
 package com.hellospring.domain;
 
-import lombok.Data;
-
 /**
  * データ
  * @author parkh

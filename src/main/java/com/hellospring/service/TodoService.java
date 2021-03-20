@@ -46,9 +46,9 @@ public class TodoService {
 		return list;
 	}
 
-	private int getInt() {
-		return 1;
-	}
+//	private int getInt() {
+//		return 1;
+//	}
 
     @Transactional
 	public int register(Todo todo) {

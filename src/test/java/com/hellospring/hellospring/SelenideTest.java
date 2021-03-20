@@ -3,7 +3,6 @@ package com.hellospring.hellospring;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 public class SelenideTest {

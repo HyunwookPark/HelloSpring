@@ -1,23 +1,15 @@
 package com.hellospring.service;
 
-import com.hellospring.domain.Todo;
-import com.hellospring.mapper.TodoListMapper;
-import com.hellospring.mapper.TodoMapper;
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.mockito.Mockito.when;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hellospring.domain.Todo;
 
 @SpringBootTest
 public class TodoServiceTest {
