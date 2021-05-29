@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:33306/banana
-    username: develop
-    password: develop
+    url: jdbc:mysql://db-java-study-01.c9brofv98azn.ap-northeast-3.rds.amazonaws.com:3306/hellospring
+    username: admin
+    password: ppppaaaa
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: always
 server:
