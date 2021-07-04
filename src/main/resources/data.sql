@@ -8,4 +8,5 @@ INSERT INTO m_user (username, password) VALUES ('user', '$2a$10$lngBok1MF6ZXR3/l
 DELETE FROM m_user_roles;
 INSERT INTO m_user_roles (username, role_nm) VALUES ('test', 'ROLE_USER');
 INSERT INTO m_user_roles (username, role_nm) VALUES ('user', 'ROLE_USER');
+DELETE FROM todo;
 INSERT INTO todo (id, status_cd, title, content) VALUES (1, '1', 'おためし', 'ないよう');

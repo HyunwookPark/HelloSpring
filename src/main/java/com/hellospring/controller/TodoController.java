@@ -51,14 +51,6 @@ public class TodoController {
 
 	@RequestMapping("/newtodo")
 	public String newtodo(Model model) {
-		MachineInfo machine = new MachineInfo();
-		Platform platform = new Platform("2", "なまえ2");
-		machine.setPlatform(platform);
-		model.addAttribute("machine", machine);
-		List<Platform> platformItems = new ArrayList<>();
-		platformItems.add(new Platform("1", "なまえ1"));
-		platformItems.add(new Platform("2", "なまえ2"));
-		model.addAttribute("platformItems", platformItems);
 		return "register";
 	}
 
