@@ -29,7 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.authorizeRequests()
 				.antMatchers("/logout").permitAll()
-//				.anyRequest().authenticated()
+				.anyRequest().authenticated()
 				.and()
 			.formLogin()
 				.loginPage("/login")
@@ -45,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		PasswordEncoder encoder = new BCryptPasswordEncoder();
-		System.out.println(encoder.encode("test"));
+		System.out.println(encoder.encode("testpass"));
 		return encoder;
 	}
 }

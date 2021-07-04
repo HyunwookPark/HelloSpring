@@ -1,5 +1,6 @@
 package com.hellospring.service;
 
+import com.hellospring.auth.User;
 import com.hellospring.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,5 +21,6 @@ public class UserService implements UserDetailsService {
             throw new UsernameNotFoundException("ユーザが存在しない");
         }
         return user;
+//        return new User("testuser", "testpass");
     }
 }

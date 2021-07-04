@@ -3,7 +3,6 @@ package com.hellospring.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hellospring.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hellospring.domain.Todo;
+import com.hellospring.service.TodoService;
 
 @Controller
 public class TodoController {
@@ -50,7 +50,15 @@ public class TodoController {
 	}
 
 	@RequestMapping("/newtodo")
-	public String newtodo() {
+	public String newtodo(Model model) {
+		MachineInfo machine = new MachineInfo();
+		Platform platform = new Platform("2", "なまえ2");
+		machine.setPlatform(platform);
+		model.addAttribute("machine", machine);
+		List<Platform> platformItems = new ArrayList<>();
+		platformItems.add(new Platform("1", "なまえ1"));
+		platformItems.add(new Platform("2", "なまえ2"));
+		model.addAttribute("platformItems", platformItems);
 		return "register";
 	}
 

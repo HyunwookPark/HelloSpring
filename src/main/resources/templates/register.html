@@ -4,7 +4,7 @@
   </head>
   <body>
     <div class="container">
-      <form th:action="@{/register}" method="post">
+      <form th:action="@{/register}" method="post" th:object="${machine}">
         <div class="row">
           <div class="col">
             <div class="form-group">
@@ -24,6 +24,10 @@
             <div class="form-group">
               <label for="content">内容</label>
               <input type="text" class="form-control" id="content" name="content">
+
+              <select class="form-control" th:field="*{platform.id}" id="platform">
+              	<option th:each="item: ${platformItems}" th:value="${item.id}" th:text="${item.name}" ></option>
+              </select>
             </div>
           </div>
         </div>
